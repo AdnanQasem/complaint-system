@@ -1,0 +1,318 @@
+/* Login.css - Premium Modern Layout */
+
+.login-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background-color: var(--bg-color);
+  overflow: hidden;
+  direction: rtl;
+}
+
+.login-split {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Right Side - Form */
+.login-form-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--panel-bg);
+  padding: 40px;
+  position: relative;
+  z-index: 10;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.05);
+}
+
+.login-form-wrapper {
+  width: 100%;
+  max-width: 420px;
+  animation: fadeInForm 0.8s ease-out;
+}
+
+@keyframes fadeInForm {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.login-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 50px;
+}
+
+.login-brand h2 {
+  font-size: 1.4rem;
+  color: var(--primary-blue);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.login-header {
+  margin-bottom: 35px;
+}
+
+.login-header h1 {
+  font-size: 2rem;
+  color: var(--text-main);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.login-header p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Form Elements */
+.login-form .form-group {
+  margin-bottom: 22px;
+}
+
+.login-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon input {
+  width: 100%;
+  padding: 14px 44px 14px 14px;
+  border: 1.5px solid var(--border-color);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-with-icon input:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  background-color: var(--panel-bg);
+  box-shadow: 0 0 0 4px rgba(29, 112, 184, 0.1);
+}
+
+.input-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  transition: color 0.3s;
+}
+
+.input-with-icon input:focus + .input-icon {
+  color: var(--primary-blue);
+}
+
+.form-actions-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.remember-me input {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1.5px solid var(--border-color);
+  cursor: pointer;
+}
+
+.forgot-password {
+  font-size: 0.9rem;
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.forgot-password:hover {
+  opacity: 0.8;
+}
+
+.login-btn {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, #175a96 100%);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(29, 112, 184, 0.3);
+}
+
+.login-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(29, 112, 184, 0.4);
+}
+
+.login-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Left Side - Hero */
+.login-hero-side {
+  flex: 1.4;
+  background: #0f172a;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(29, 112, 184, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(30, 58, 95, 0.2) 0px, transparent 50%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  max-width: 580px;
+  animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  margin-bottom: 24px;
+  color: #38bdf8;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  line-height: 1.3;
+  font-weight: 800;
+  margin-bottom: 24px;
+  background: linear-gradient(to bottom left, #fff, #94a3b8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #94a3b8;
+  margin-bottom: 60px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.feature-card {
+  display: flex;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 24px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
+}
+
+.feature-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(29, 112, 184, 0.2);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #38bdf8;
+  flex-shrink: 0;
+}
+
+.ai-glowing {
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+}
+
+.feature-info h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #f1f5f9;
+}
+
+.feature-info p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #94a3b8;
+}
+
+.hero-footer {
+  position: absolute;
+  bottom: 40px;
+  right: 80px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .hero-content h1 { font-size: 2.2rem; }
+  .login-hero-side { padding: 40px; }
+}
+
+@media (max-width: 900px) {
+  .login-hero-side { display: none; }
+  .login-form-side { flex: 1; padding: 24px; }
+}

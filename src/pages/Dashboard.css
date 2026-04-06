@@ -1,0 +1,258 @@
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.dashboard-header h1 {
+  font-size: 1.5rem;
+  color: var(--dark-navy);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+}
+
+.stat-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-content p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.stat-content h3 {
+  color: var(--dark-navy);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  color: var(--dark-navy);
+  font-size: 1.1rem;
+}
+
+.view-all {
+  color: var(--primary-blue);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.chart-container {
+  height: 300px;
+  margin-top: 20px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+  padding: 14px 16px;
+  text-align: right;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.data-table th {
+  background-color: var(--bg-color);
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.data-table tbody tr:hover {
+  background-color: #F8FAFC;
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.status-badge.level-normal {
+  background-color: #ECFDF5;
+  color: var(--status-success);
+}
+
+.status-badge.level-warning {
+  background-color: #FFFBEB;
+  color: var(--status-warning);
+}
+
+.status-badge.level-critical {
+  background-color: #FEF2F2;
+  color: var(--status-critical);
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+/* Welcome Banner */
+.welcome-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 24px 28px;
+  gap: 16px;
+}
+
+.welcome-banner h2 {
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+}
+
+.welcome-banner p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.dashboard-container > .card {
+  margin-bottom: 24px;
+}
+
+.recent-complaints {
+  margin-bottom: 24px;
+}
+
+.complaint-id {
+  font-weight: 600;
+  color: var(--primary-blue);
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+/* Status badge extra colors */
+.status-badge.success {
+  background-color: #ECFDF5;
+  color: var(--status-success);
+}
+
+.status-badge.warning {
+  background-color: #FFFBEB;
+  color: var(--status-warning);
+}
+
+.status-badge.critical {
+  background-color: #FEF2F2;
+  color: var(--status-critical);
+}
+
+.status-badge.level-warning {
+  background-color: #FFF7ED;
+  color: #C2410C;
+}
+
+.status-badge.level-normal {
+  background-color: #F1F5F9;
+  color: #475569;
+}
+
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Print Styles for PDF Export */
+@media print {
+  .sidebar, .topbar, .top-header, .header-actions, .form-actions, .sidebar-footer, .breadcrumb, .search-bar, .icon-btn, .user-profile, .icon-wrapper {
+    display: none !important;
+  }
+  
+  .main-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  
+  .app-container {
+    display: block !important;
+  }
+
+  .card {
+    box-shadow: none !important;
+    border: 1px solid #e2e8f0 !important;
+    break-inside: avoid;
+  }
+
+  body {
+    background-color: white !important;
+    font-size: 12pt;
+  }
+
+  .page-header h1 {
+    font-size: 20pt;
+    margin-bottom: 10px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .dashboard-grid {
+    display: block !important;
+  }
+
+  .chart-section {
+    margin-bottom: 40px;
+  }
+}
+

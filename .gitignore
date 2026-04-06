@@ -1,0 +1,30 @@
+# Gitignore for Shakooti Project
+
+# Node.js
+node_modules/
+dist/
+build/
+.npm
+npm-debug.log*
+
+# Python / Django
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env
+db.sqlite3
+media/
+staticfiles/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,242 @@
+.sidebar {
+  width: var(--sidebar-width);
+  background-color: var(--dark-navy);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-placeholder {
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-header h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 20px 0;
+  overflow-y: auto;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 24px;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.2s;
+  border-right: 4px solid transparent;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.nav-item.active {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-right-color: #fff;
+}
+
+.sidebar-footer {
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logout-btn {
+  width: 100%;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  text-align: right;
+}
+
+.logout-btn:hover {
+  color: #E11D48;
+}
+
+.top-header {
+  height: var(--header-height);
+  background-color: var(--panel-bg);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.header-breadcrumbs {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.header-breadcrumbs .active-path {
+  color: var(--dark-navy);
+  font-weight: 600;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon-btn {
+  background: transparent;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  color: var(--primary-blue);
+}
+
+.user-profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.user-profile:hover {
+  background-color: rgba(0,0,0,0.04);
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  background-color: var(--primary-blue);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* Profile Dropdown */
+.profile-dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+  z-index: 100;
+}
+
+.profile-dropdown.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  padding: 12px 16px;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.2s;
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  width: 100%;
+  text-align: right;
+  cursor: pointer;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(0,0,0,0.04);
+  color: var(--primary-blue);
+}
+
+.dropdown-item.logout {
+  color: var(--status-critical);
+}
+
+.dropdown-item.logout:hover {
+  background-color: #FEF2F2;
+}
+
+/* Admin Topbar Styles */
+.topbar {
+  height: var(--header-height);
+  background-color: var(--panel-bg);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-color);
+  padding: 8px 16px;
+  border-radius: 20px;
+  width: 300px;
+  gap: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  width: 100%;
+  outline: none;
+  font-size: 0.9rem;
+}
